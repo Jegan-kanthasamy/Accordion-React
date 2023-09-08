@@ -7,9 +7,11 @@ export default function AccordionItem({ num, title, text }) {
       className={`item ${toggle ? "" : "open"}`}
       onClick={e => setToggle(!toggle)}
     >
-      <p className="number">{num > 9 ? num : `${0}${num + 1}`}</p>
-      <p className="title">{title}</p>
-      <p className="icon">-</p>
+      <p className={`number ${toggle ? "" : "color"} `}>
+        {num > 8 ? num + 1 : `${0}${num + 1}`}
+      </p>
+      <p className={`title ${toggle ? "" : "color"} `}>{title}</p>
+      <p className="icon">{toggle ? "+" : "-"}</p>
       <div className={`content-box ${toggle ? "disable" : ""}`}>
         <p>{text}</p>
       </div>
