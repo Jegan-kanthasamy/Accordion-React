@@ -1,9 +1,9 @@
 import "../index.css";
 import AccordionItem from "./AccordionItem";
-export default function Accordion({ datas }) {
+export default function Accordion({ details }) {
   return (
     <div className="accordion">
-      {datas.map((e, i) => (
+      {details.map((e, i) => (
         <AccordionItem num={i} title={e.title} text={e.text} />
       ))}
     </div>
